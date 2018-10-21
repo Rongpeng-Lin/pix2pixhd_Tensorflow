@@ -11,4 +11,4 @@ Pix2pix primary architecture based solely on tensorflow
 &#8195;&#8195;For the output of the encoder, add two control quantities, k, b. Output = output(encoder) * k + b. When training, k=1, b=0; when inference, k=0, b is a manually added feature value.<br>
 ## Train:
 &#8195;&#8195;python ./data/pix2pixHD/train_test.py --phase="train" --epoch=500 --batch=1 --n_class=34 --num_d=2 --save_iter=5 --decay_ep=10 --im_high=1024 --im_width=2048 --feat_weight=10 --old_lr=0.002 --decay_weight=20 --sace_ckpt_iter=2 --data_dir="./data/pix2pix/data" --tf_record_dir="./data/pix2pix/data/train/" --save_path="./data/train/Logs" --save_im_dir="./data/train/Logs" --ckpt_dir="./data/train/Logs" --label_dir="./data/train/Logs" --inst_dir="./data/train/Logs"<br>
-At training time,the input of ckpt, label_dir, and ins_dir is not required during training, just for the setting of argparse.
+&#8195;At training time,the input of ckpt, label_dir, and ins_dir is not required during training, just for the setting of argparse.
